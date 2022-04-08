@@ -1,22 +1,32 @@
 package com.ashketshup;
 
 import java.util.List;
-import static com.ashketshup.Navigation.getMaxAmountItems;
+import com.ashketshup.Navigation;
 
 public class Pages {
+    private static int maxAmountItems = 0;
     private int currentPage = 0;
     private int pagesAmount;
 
-    public void setPagesAmount(int scrollableListSize) {
-        this.pagesAmount = (int) Math.ceil((double) scrollableListSize / (double) getMaxAmountItems());
+    public Pages(int contentSize) {
+        this.currentPage = 0;
+        this.pagesAmount = (int) Math.ceil((double) contentSize / (double) maxAmountItems);
     }
 
-    public int getPagesAmount(int scrollableListSize) {
+    public static void setMaxAmountItems(int maxItems) {
+        Pages.maxAmountItems = maxItems;
+    }
+
+    public static int getMaxAmountItems() {
+        return Pages.maxAmountItems;
+    }
+
+    public void setPagesAmount(int amountPages) {
+        this.pagesAmount = amountPages;
+    }
+
+    public int getPagesAmount() {
         return pagesAmount;
-    }
-
-    public void setCurrentIndex(int index) {
-        this.currentPage = index;
     }
 
     /**
@@ -29,30 +39,30 @@ public class Pages {
     }
 
     public void nextPage() {
-        int nextIndex = getCurrentPage() + 1;
+        int nextIndex = currentPage + 1;
 
-        if (0 <= (nextIndex) && (nextIndex) <= pagesAmount)
-            setCurrentIndex(nextIndex);
+        if (0 <= (nextIndex) && (nextIndex) < pagesAmount)
+            this.currentPage = nextIndex;
     }
 
     public void lastPage() {
-        int nextIndex = getCurrentPage() - 1;
+        int nextIndex = currentPage - 1;
 
-        if (0 <= (nextIndex) && (nextIndex) <= pagesAmount)
-            setCurrentIndex(nextIndex);
+        if (0 <= (nextIndex) && (nextIndex) < pagesAmount)
+            this.currentPage = nextIndex;
     }
 
     public <T> List<T> trimContent(List<T> content) {
-        int start  = getCurrentPage() * getMaxAmountItems();
-        int finish = start + getMaxAmountItems();
+        int start  = currentPage * maxAmountItems;
+        int finish = start + maxAmountItems;
 
-        if (finish >= content.size() || finish < 0)
+        if (finish >= content.size() || finish <= 0)
             finish = content.size();
 
         return content.subList(start, finish);
     }
 
     public String pageToString() {
-        return currentPage + "/" + pagesAmount;
+        return (currentPage + 1) + "/" + pagesAmount;
     }
 }

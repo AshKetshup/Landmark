@@ -21,7 +21,8 @@ public class Navigation {
      * @param maxItems  the max items
      */
     public Navigation(ScreenManager sM, int maxItems) {
-        Navigation.maxAmountItems = maxItems;
+        this.maxAmountItems = maxItems;
+        Pages.setMaxAmountItems(maxItems);
         // <editor-fold desc="List of Default Commands">
         defaultCommands.addAll(
             Arrays.asList(
@@ -43,13 +44,13 @@ public class Navigation {
                     true,
                     ":su",
                     "Scroll Up",
-                    () -> { /* TODO Scroll Up */ }
+                    () -> { sM.getBindedScreen().lastPage(); }
                 ),
                 new Command(
                     true,
                     ":sd",
                     "Scroll Down",
-                    () -> { /* TODO Scroll Down */ }
+                    () -> { sM.getBindedScreen().nextPage(); }
                 ),
                 new Command(
                     true,
@@ -78,7 +79,7 @@ public class Navigation {
      *
      * @return the max amount of items
      */
-    public static int getMaxAmountItems() {
+    public int getMaxAmountItems() {
         return maxAmountItems;
     }
 
@@ -105,7 +106,7 @@ public class Navigation {
      *
      * @param maxAmountItems the max amount items
      */
-    public void setMaxAmountItems(int maxAmountItems) {
+    public static void setMaxAmountItems(int maxAmountItems) {
         Navigation.maxAmountItems = maxAmountItems;
     }
 

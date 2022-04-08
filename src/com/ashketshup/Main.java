@@ -46,6 +46,6 @@ public class Main {
 
         sM.bindScreen(sM.getMenu("welcome"));
 
-        new Navigation(sM, 10);
+        new Navigation(sM, 3);
     }
 }

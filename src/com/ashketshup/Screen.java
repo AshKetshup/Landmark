@@ -21,6 +21,8 @@ public class Screen<T> extends Pages {
      * @param commands the commands
      */
     public Screen(String title, Collection<T> content, Collection<Command> commands, ScreenManager context) {
+        super(content.size());
+
         this.screenContent.addAll(content);
         this.screenCommands.addAll(commands);
         this.screenTitle = title;
@@ -123,7 +125,7 @@ public class Screen<T> extends Pages {
             String index = new StringStyler(
                 String.valueOf(
                     x ? i : "" +
-                    getCurrentPage() * Navigation.getMaxAmountItems()
+                    getCurrentPage() * Pages.getMaxAmountItems()
                 ),
                 WHITE,
                 BOLD,

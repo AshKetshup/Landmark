@@ -113,7 +113,7 @@ public class Menu extends Screen<Option> {
 
         for (int i = 0; i < printableOptions.size(); i++) {
             String index = new StringStyler(
-                String.valueOf(i + getCurrentPage() * Navigation.getMaxAmountItems()),
+                String.valueOf(i + getCurrentPage() * Pages.getMaxAmountItems()),
                 WHITE,
                 BOLD,
                 false

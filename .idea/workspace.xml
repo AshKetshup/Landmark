@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="781f7183-5448-4a9c-be98-779843d0d587" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TUI-Java-Navigation.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Navigation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/TUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,5 +121,26 @@
       <updated>1649430190253</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ashketshup/Main.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ashketshup/Main.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ashketshup/Main.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

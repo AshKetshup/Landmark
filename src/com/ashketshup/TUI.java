@@ -104,11 +104,11 @@ public class TUI {
     }
 
     public static String getAllCriticals() {
-        StringBuilder sumCriticals = new StringBuilder(TUI.CRITICAL_PREFIX);
+        StringBuilder sumCriticals = new StringBuilder();
 
         for (String critical : TUI.criticals) {
             StringStyler x = new StringStyler(
-                critical,
+                TUI.CRITICAL_PREFIX + critical,
                 StringStyler.RED,
                 StringStyler.BLINK,
                 true
@@ -122,11 +122,11 @@ public class TUI {
     }
 
     public static String getAllValids() {
-        StringBuilder sumValids = new StringBuilder(TUI.VALID_PREFIX);
+        StringBuilder sumValids = new StringBuilder();
 
         for (String valid : TUI.valids) {
             StringStyler x = new StringStyler(
-                valid,
+                TUI.VALID_PREFIX + valid,
                 StringStyler.GREEN,
                 StringStyler.NORMAL,
                 true
@@ -139,11 +139,11 @@ public class TUI {
     }
 
     public static String getAllWarnings() {
-        StringBuilder sumWarnings = new StringBuilder(TUI.WARNING_PREFIX);
+        StringBuilder sumWarnings = new StringBuilder();
 
         for (String warning : TUI.warnings) {
             StringStyler x = new StringStyler(
-                warning,
+                TUI.WARNING_PREFIX + warning,
                 StringStyler.YELLOW,
                 StringStyler.UNDERLINE,
                 false
@@ -156,11 +156,11 @@ public class TUI {
     }
 
     public static String getAllTips() {
-        StringBuilder sumTips = new StringBuilder(TUI.TIP_PREFIX);
+        StringBuilder sumTips = new StringBuilder();
 
         for (String tip : TUI.tips) {
             StringStyler x = new StringStyler(
-                tip,
+                TUI.TIP_PREFIX + tip,
                 StringStyler.YELLOW,
                 StringStyler.UNDERLINE,
                 false
@@ -176,17 +176,25 @@ public class TUI {
         StringBuilder sumAlarms;
         sumAlarms = new StringBuilder("\n");
 
-        // Get all criticals as binking underlined red
-        sumAlarms.append(getAllCriticals());
+        if (!criticals.isEmpty()) {
+            // Get all criticals as binking underlined red
+            sumAlarms.append(getAllCriticals());
+        }
 
-        // Get all valids as green
-        sumAlarms.append(getAllValids());
+        if (!valids.isEmpty()) {
+            // Get all valids as green
+            sumAlarms.append(getAllValids());
+        }
 
-        // Get all warnings as yellow underlined
-        sumAlarms.append(getAllWarnings());
+        if (!warnings.isEmpty()) {
+            // Get all warnings as yellow underlined
+            sumAlarms.append(getAllWarnings());
+        }
 
-        // Get all tips as white
-        sumAlarms.append(getAllTips());
+        if (!tips.isEmpty()) {
+            // Get all tips as white
+            sumAlarms.append(getAllTips());
+        }
 
         return sumAlarms.toString();
     }

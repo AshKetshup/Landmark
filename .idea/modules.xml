@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TUI-Java-Navigation.iml" filepath="$PROJECT_DIR$/SD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TUI-Navigation.iml" filepath="$PROJECT_DIR$/TUI-Navigation.iml" />
     </modules>
   </component>
 </project>

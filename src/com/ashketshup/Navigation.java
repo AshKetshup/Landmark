@@ -121,6 +121,7 @@ public class Navigation {
             }
 
             renderLoop();
+            TUI.removeAllAlarms();
         } while ( inputListener(TUI.requestInput()) );
     }
 

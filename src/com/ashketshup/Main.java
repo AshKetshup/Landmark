@@ -1,12 +1,15 @@
 package com.ashketshup;
 
 import java.util.Arrays;
+import com.ashketshup.StringStyler;
 
 public class Main {
 
     public static void main(String[] args) {
         ScreenManager sM = new ScreenManager();
+        Navigation nav = new Navigation(sM, 3);
 
+        // region Menus & Articles
         sM.addMenu(
             "welcome",
             new Menu(
@@ -27,25 +30,25 @@ public class Main {
             new Article(
                 "Artigo 1 - Artigo de teste",
                 Arrays.asList(
-                    new TUI.StringStyler(
+                    new StringStyler(
                         "Oh shit, isto está a funcionar!\n",
-                        TUI.StringStyler.WHITE,
-                        TUI.StringStyler.BLINK,
+                        StringStyler.WHITE,
+                        StringStyler.BLINK,
                         true
                     ),
-                    new TUI.StringStyler(
+                    new StringStyler(
                         "Teste, teste",
-                        TUI.StringStyler.WHITE,
-                        TUI.StringStyler.NORMAL,
+                        StringStyler.WHITE,
+                        StringStyler.NORMAL,
                         false
                     )
                 ),
                 sM
             )
         );
+        // endregion
 
         sM.bindScreen(sM.getMenu("welcome"));
-
-        new Navigation(sM, 3);
+        nav.loop();
     }
 }

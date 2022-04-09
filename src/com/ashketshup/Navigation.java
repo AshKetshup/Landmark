@@ -21,8 +21,7 @@ public class Navigation {
      * @param maxItems  the max items
      */
     public Navigation(ScreenManager sM, int maxItems) {
-        this.maxAmountItems = maxItems;
-        Pages.setMaxAmountItems(maxItems);
+        Navigation.maxAmountItems = maxItems;
         // <editor-fold desc="List of Default Commands">
         defaultCommands.addAll(
             Arrays.asList(
@@ -70,8 +69,6 @@ public class Navigation {
         );
         //  </editor-fold>
         this.sM = sM;
-
-        loop();
     }
 
     /**
@@ -79,8 +76,8 @@ public class Navigation {
      *
      * @return the max amount of items
      */
-    public int getMaxAmountItems() {
-        return maxAmountItems;
+    public static int getMaxAmountItems() {
+        return Navigation.maxAmountItems;
     }
 
     /**
@@ -149,6 +146,9 @@ public class Navigation {
     public boolean inputListener(String s) {
         boolean toWarn = true;
 
+        if (s.isEmpty())
+            return renderer;
+
         if (s.charAt(0) == ':') {
             // Check if it is using an available command
             ArrayList<Command> allAvailableCommands = new ArrayList<>(defaultCommands);
@@ -183,57 +183,63 @@ public class Navigation {
         return renderer;
     }
 
+
+    /**
+     * Generates an help article, containing all commands available in the current screen.
+     *
+     * @return the article
+     */
     private Article generateHelpArticle() {
         List<Command> navigationCommands = getDefaultCommands();
         List<Command> screenCommands = sM.getBindedScreen().getScreenCommands();
 
-        ArrayList<TUI.StringStyler> content = new ArrayList<>();
+        ArrayList<StringStyler> content = new ArrayList<>();
 
         if (!navigationCommands.isEmpty()) {
             content.add(
-                new TUI.StringStyler(
+                new StringStyler(
                     "Navigation Commands",
-                    TUI.StringStyler.WHITE,
-                    TUI.StringStyler.UNDERLINE,
+                    StringStyler.WHITE,
+                    StringStyler.UNDERLINE,
                     true
                 )
             );
 
             for (Command cmd : navigationCommands) {
                 content.add(
-                    new TUI.StringStyler(
+                    new StringStyler(
                         cmd.toString(),
-                        TUI.StringStyler.WHITE,
-                        TUI.StringStyler.NORMAL
+                        StringStyler.WHITE,
+                        StringStyler.NORMAL
                     )
                 );
             }
         }
 
         content.add(
-            new TUI.StringStyler(
+            new StringStyler(
                 "\n --- \n",
-                TUI.StringStyler.WHITE,
-                TUI.StringStyler.NORMAL
+                StringStyler.WHITE,
+                StringStyler.NORMAL
             )
         );
 
         if (!screenCommands.isEmpty()) {
             content.add(
-                new TUI.StringStyler(
+                new StringStyler(
                     "Screen Commands",
-                    TUI.StringStyler.WHITE,
-                    TUI.StringStyler.UNDERLINE,
+                    StringStyler.WHITE,
+                    StringStyler.UNDERLINE,
                     true
                 )
             );
 
             for (Command cmd : screenCommands) {
                 content.add(
-                    new TUI.StringStyler(
+                    new StringStyler(
                         cmd.toString(),
-                        TUI.StringStyler.WHITE,
-                        TUI.StringStyler.NORMAL
+                        StringStyler.WHITE,
+                        StringStyler.NORMAL
                     )
                 );
             }

@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static com.ashketshup.TUI.StringStyler.*;
-import com.ashketshup.TUI.StringStyler;
-
 public class Screen<T> extends Pages {
     private String screenTitle = "";
     private final List<T> screenContent = new ArrayList<>();
@@ -27,8 +24,6 @@ public class Screen<T> extends Pages {
         this.screenCommands.addAll(commands);
         this.screenTitle = title;
         this.context = context;
-
-        setPagesAmount(content.size());
     }
 
     /**
@@ -101,46 +96,6 @@ public class Screen<T> extends Pages {
         return screenCommands;
     }
 
-    @Override
-    public String toString() {
-        boolean x = screenContent.get(0).getClass().equals(Option.class);
-
-        StringStyler title = new StringStyler(
-            this.screenTitle + "\n",
-            WHITE,
-            UNDERLINE,
-            true
-        );
-
-        StringStyler pageInfo = new StringStyler(
-            pageToString() + "\n\n",
-            WHITE,
-            ITALIC
-        );
-
-        StringBuilder content = new StringBuilder();
-        List<T> printableContent = trimContent(screenContent);
-
-        for (int i = 0; i < printableContent.size(); i++) {
-            String index = new StringStyler(
-                String.valueOf(
-                    x ? i : "" +
-                    getCurrentPage() * Pages.getMaxAmountItems()
-                ),
-                WHITE,
-                BOLD,
-                false
-            ).toString();
-
-            content.append(index)
-                .append(x ? " : " : "")
-                .append(screenContent.get(i).toString())
-                .append("\n");
-        }
-
-        return "" + title + pageInfo + content;
-    }
-
     public ScreenManager getContext() {
         return context;
     }
@@ -153,6 +108,47 @@ public class Screen<T> extends Pages {
      */
     private boolean isIndexAvailable(int i) {
         return (i >= 0 && i < screenContent.size());
+    }
+
+    @Override
+    public String toString() {
+        boolean isOption = screenContent.get(0).getClass().equals(Option.class);
+
+        StringStyler title = new StringStyler(
+            this.screenTitle + "\n",
+            StringStyler.WHITE,
+            StringStyler.UNDERLINE,
+            true
+        );
+
+        StringStyler pageInfo = new StringStyler(
+            pageToString() + "\n\n",
+            StringStyler.WHITE,
+            StringStyler.ITALIC
+        );
+
+        StringBuilder content = new StringBuilder();
+        List<T> printableContent = trimContent(screenContent);
+
+        for (int i = 0; i < printableContent.size(); i++) {
+            String index = new StringStyler(
+                String.valueOf(
+                    isOption ? i : "" +
+                    getCurrentPage() * Navigation.getMaxAmountItems()
+                ),
+                StringStyler.WHITE,
+                StringStyler.BOLD,
+                false
+            ).toString();
+
+            if (isOption)
+                content.append(index).append(" : ");
+
+            content.append(screenContent.get(i).toString())
+                .append("\n");
+        }
+
+        return "" + title + pageInfo + content;
     }
 
 }

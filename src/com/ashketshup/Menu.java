@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static com.ashketshup.TUI.StringStyler.*;
-import com.ashketshup.TUI.StringStyler;
-
 /**
  * The type Menu.
  * Represents a menu rendered in the TUI with Options, special Commands and a Title.
@@ -97,15 +94,15 @@ public class Menu extends Screen<Option> {
     public String toString() {
         StringStyler title = new StringStyler(
             getMenuTitle() + "\n",
-            WHITE,
-            UNDERLINE,
+            StringStyler.WHITE,
+            StringStyler.UNDERLINE,
             true
         );
 
         StringStyler pageInfo = new StringStyler(
             pageToString() + "\n\n",
-            WHITE,
-            ITALIC
+            StringStyler.WHITE,
+            StringStyler.ITALIC
         );
 
         StringBuilder options = new StringBuilder();
@@ -113,9 +110,9 @@ public class Menu extends Screen<Option> {
 
         for (int i = 0; i < printableOptions.size(); i++) {
             String index = new StringStyler(
-                String.valueOf(i + getCurrentPage() * Pages.getMaxAmountItems()),
-                WHITE,
-                BOLD,
+                String.valueOf(i + getCurrentPage() * Navigation.getMaxAmountItems()),
+                StringStyler.WHITE,
+                StringStyler.BOLD,
                 false
             ).toString();
 

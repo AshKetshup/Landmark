@@ -3,7 +3,7 @@ package com.ashketshup;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Article extends Screen<TUI.StringStyler> {
+public class Article extends Screen<StringStyler> {
     /**
      * Instantiates a new Menu.
      *
@@ -12,7 +12,7 @@ public class Article extends Screen<TUI.StringStyler> {
      * @param commands the commands
      * @param context the context
      */
-    public Article(String title, Collection<TUI.StringStyler> content, Collection<Command> commands, ScreenManager context) {
+    public Article(String title, Collection<StringStyler> content, Collection<Command> commands, ScreenManager context) {
         super(title, content, commands, context);
     }
 
@@ -23,7 +23,7 @@ public class Article extends Screen<TUI.StringStyler> {
      * @param content the content
      * @param context the context
      */
-    public Article(String title, Collection<TUI.StringStyler> content, ScreenManager context) {
+    public Article(String title, Collection<StringStyler> content, ScreenManager context) {
         this(title, content, new ArrayList<>(), context);
     }
 
@@ -33,7 +33,7 @@ public class Article extends Screen<TUI.StringStyler> {
      * @param content the content
      * @param context the context
      */
-    public Article(Collection<TUI.StringStyler> content, ScreenManager context) {
+    public Article(Collection<StringStyler> content, ScreenManager context) {
         this("Default Menu Title", content, context);
     }
 }

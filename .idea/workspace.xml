@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="781f7183-5448-4a9c-be98-779843d0d587" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/ashketshup/StringStyler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Navigation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ashketshup/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ashketshup/TUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ashketshup/TUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,23 +133,39 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/ashketshup/Main.java</url>
-          <line>7</line>
+          <line>51</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/ashketshup/Pages.java</url>
+          <line>13</line>
+          <properties field="pagesAmount" class="com.ashketshup.Pages" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/ashketshup/Main.java</url>
-          <line>9</line>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/ashketshup/Pages.java</url>
+          <line>20</line>
+          <properties class="com.ashketshup.Pages" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/ashketshup/Main.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

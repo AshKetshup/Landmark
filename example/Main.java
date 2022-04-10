@@ -1,15 +1,13 @@
 package com.ashketshup;
 
 import java.util.Arrays;
-import com.ashketshup.StringStyler;
 
 public class Main {
-
     public static void main(String[] args) {
         ScreenManager sM = new ScreenManager();
         Navigation nav = new Navigation(sM, 3);
 
-        // region Menus & Articles
+        // region Menus & Articles Declarations
         sM.addMenu(
             "welcome",
             new Menu(

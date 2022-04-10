@@ -1,2 +1,2 @@
-# Landmark
-Landmark is a TUI navigation JAVA library.
+![Landmark Logotype](img/Landmark-Logotype.png)
+

@@ -1,2 +1,2 @@
-# TUI-Java-Navigation
-A TUI Navigation Library (made in Java)
+# Landmark
+Landmark is a TUI navigation JAVA library.

@@ -95,8 +95,75 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-<!-- TODO -->
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+How to initialize your program
+```Java
+public static void main(String[] args) {
+    ScreenManager sM = new ScreenManager();
+    Navigation nav = new Navigation(
+        sM,
+        3       // amount of items shown for each page.
+    );
+
+    declareScreens(sM);     // Method used to declare all Screens
+    
+    // Binds a given Screen. You can get a Screen by using a getMenu or getArticle method given by the ScreenManager.
+    sM.bindScreen(sM.getMenu("welcome_menu"));  
+
+    // Starts the Loop with the given Articles and Menus
+    nav.loop();
+}
+```
+
+Example on how to declare menus and articles
+```Java
+public static void declareScreens(ScreenManager sM) {
+    sM.addMenu(
+        "welcome_menu",
+        new Menu(
+            "Hello World this is the title of the Welcome Menu",
+            Arrays.asList(
+                new Option(
+                    "Article #1",       // Description 
+                    () -> { sM.bindScreen(sM.getArticle("article_1")); }    // What is executed.
+                ),
+                new Option(
+                    "Article #2",       // Description
+                    () -> { sM.bindScreen(sM.getArticle("article_2")); }    // What is executed.
+                ),
+                new Option(
+                    "Next Menu",       // Description 
+                    () -> { sM.bindScreen(sM.getMenu("main_menu")); }       // What is executed.
+                )
+            ),
+            sM
+        )
+    );
+
+    sM.addArticle(
+        "article_1",
+        new Article(
+            "This is the title of the Article #1",
+            Arrays.asList(
+                new StringStyler(
+                    "This is the 1st line of the Article of color a bright blinking white\n", // Text
+                    StringStyler.WHITE, // Color
+                    StringStyler.BLINK, // Mode
+                    true                // Bright?
+                ),
+                new StringStyler(
+                    "This is the 2nd line of the Article of color green with a normal style and not bright",
+                    StringStyler.WHITE,
+                    StringStyler.NORMAL,
+                    false
+                )
+            ),
+            sM
+        )
+    );
+
+    (...)
+}
+```
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -113,10 +180,17 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [X] Valid Notification
     - [X] Warning Notification
     - [X] Tip Notification
-- [X] Menus
-- [X] Articles
+- [X] Screens
+    - [X] Menus
+    - [X] Articles
 - [X] CallStack
+- [X] Commands
+    - [X] Default Commands
+    - [X] Screen Commands
 - [ ] Forms
+    - [ ] Login 
+    - [ ] Register 
+    - [ ] Custom 
 - [ ] File Reader
     - [ ] Markdown Parser
     - [ ] Markdown Highlighter

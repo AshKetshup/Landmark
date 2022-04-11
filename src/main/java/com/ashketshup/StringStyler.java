@@ -67,6 +67,15 @@ public class StringStyler {
     }
 
     /**
+     * Instantiates a new String styler with common parameters.
+     *
+     * @param content the content
+     */
+    public StringStyler(String content) {
+        this(content, StringStyler.WHITE, StringStyler.NORMAL);
+    }
+
+    /**
      * Sets style content.
      *
      * @param content the content

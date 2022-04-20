@@ -1,5 +1,7 @@
 package com.ashketshup;
 
+import com.ashketshup.TUI.StringStyler;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -113,6 +115,7 @@ public class Screen<T> extends Pages {
     @Override
     public String toString() {
         boolean isOption = screenContent.get(0).getClass().equals(Option.class);
+        boolean isComponent = screenContent.get(0).getClass().equals(Component.class);
 
         StringStyler title = new StringStyler(
             this.screenTitle + "\n",
@@ -133,7 +136,7 @@ public class Screen<T> extends Pages {
         for (int i = 0; i < printableContent.size(); i++) {
             String index = new StringStyler(
                 String.valueOf(
-                    isOption ? i : "" +
+                    isOption || isComponent ? i : "" +
                     getCurrentPage() * Navigation.getMaxAmountItems()
                 ),
                 StringStyler.WHITE,
@@ -141,7 +144,7 @@ public class Screen<T> extends Pages {
                 false
             ).toString();
 
-            if (isOption)
+            if (isOption || isComponent)
                 content.append(index).append(" : ");
 
             content.append(screenContent.get(i).toString())

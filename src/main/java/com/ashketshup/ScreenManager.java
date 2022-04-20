@@ -7,6 +7,7 @@ public class ScreenManager<T> {
     private final Stack<Screen<T>> callStack = new Stack<>();
     private final HashMap<String, Menu> menuHashMap = new HashMap<>();
     private final HashMap<String, Article> articleHashMap = new HashMap<>();
+    private final HashMap<String, Form> formHashMap = new HashMap<>();
 
 
     // IDEA: Tornar a stack para strings e depois apenas quando fazêmos o getBindScreen ir buscar aos HashMaps
@@ -21,12 +22,20 @@ public class ScreenManager<T> {
         articleHashMap.put(key, newArticle);
     }
 
+    public void addForm(String key, Form newForm) {
+        formHashMap.put(key, newForm);
+    }
+
     public Menu getMenu(String key) {
         return menuHashMap.get(key);
     }
 
     public Article getArticle(String key) {
         return articleHashMap.get(key);
+    }
+
+    public Form getForm(String key) {
+        return formHashMap.get(key);
     }
 
     /**

@@ -1,5 +1,10 @@
 package com.ashketshup;
 
+import com.ashketshup.TUI.Alarms;
+import com.ashketshup.TUI.Input;
+import com.ashketshup.TUI.Output;
+import com.ashketshup.TUI.StringStyler;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -12,7 +17,7 @@ public class Navigation {
     private static boolean renderer = true;
     private static int maxAmountItems;
     private final ArrayList<Command> defaultCommands = new ArrayList<>();
-    private ScreenManager sM;
+    private ScreenManager<?> sM;
 
     /**
      * Instantiates a new Navigation.
@@ -20,7 +25,7 @@ public class Navigation {
      * @param sM the screenManager
      * @param maxItems  the max items
      */
-    public Navigation(ScreenManager sM, int maxItems) {
+    public Navigation(ScreenManager<?> sM, int maxItems) {
         Navigation.maxAmountItems = maxItems;
         // <editor-fold desc="List of Default Commands">
         defaultCommands.addAll(
@@ -113,14 +118,14 @@ public class Navigation {
     public void loop() {
         do {
             try {
-                TUI.clearConsole();
+                Output.clearConsole();
             } catch (IOException | InterruptedException e) {
-                TUI.createCritical(e.getMessage());
+                Alarms.createCritical(e.getMessage());
             }
 
             renderLoop();
-            TUI.removeAllAlarms();
-        } while ( inputListener(TUI.requestInput()) );
+            Alarms.removeAllAlarms();
+        } while ( inputListener(Input.tryAsString()) );
     }
 
     /**
@@ -129,7 +134,7 @@ public class Navigation {
     private void renderLoop() {
         String render = "" +
             sM.getBindedScreen().toString() +
-            "\n" + TUI.getAllAlarms();
+            "\n" + Alarms.getAllAlarms();
 
         System.out.println(render);
     }
@@ -145,6 +150,9 @@ public class Navigation {
      */
     public boolean inputListener(String s) {
         boolean toWarn = true;
+
+        boolean isMenu = sM.getBindedScreen().getScreenContent().get(0).getClass().equals(Option.class);
+        boolean isForm = sM.getBindedScreen().getScreenContent().get(0).getClass().equals(Component.class);
 
         if (s.isEmpty())
             return renderer;
@@ -163,12 +171,17 @@ public class Navigation {
                     break;
                 }
 
-        } else if (sM.getBindedScreen().getScreenContent().get(0).getClass().equals(Option.class)) {
+        } else if (isMenu || isForm) {
             // Check if it is selecting an option
             for (int i = 0; i < sM.getBindedScreen().getScreenContent().size(); i++)
                 if (s.equalsIgnoreCase(String.valueOf(i))) {
-                    Option x = (Option) sM.getBindedScreen().getScreenContent().get(i);
-                    x.getOptionFunction().apply();
+                    if (isMenu) {
+                        Option x = (Option) sM.getBindedScreen().getScreenContent().get(i);
+                        x.getOptionFunction().apply();
+                    } else {
+                        Component x = (Component) sM.getBindedScreen().getScreenContent().get(i);
+                        x.apply();
+                    }
 
                     // Disable the warning
                     toWarn = false;
@@ -178,7 +191,7 @@ public class Navigation {
 
         // Warn if variable true
         if (toWarn)
-            TUI.createWarning(String.format("The term '%s' is not recognized as a command/option.", s));
+            Alarms.createWarning(String.format("The term '%s' is not recognized as a command/option.", s));
 
         return renderer;
     }

@@ -1,5 +1,7 @@
 package com.ashketshup;
 
+import com.ashketshup.TUI.StringStyler;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

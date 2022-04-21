@@ -61,7 +61,7 @@ public class Navigation {
                     true,
                     ":r",
                     "Refresh Screen",
-                    () -> { /* TODO Refresh */ }
+                    () -> { }
                 ),
                 new Command(
                     false,

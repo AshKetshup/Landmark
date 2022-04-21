@@ -11,7 +11,7 @@ public class Screen<T> extends Pages {
     private String screenTitle = "";
     private final List<T> screenContent = new ArrayList<>();
     private final List<Command> screenCommands = new ArrayList<>();
-    private final ScreenManager context;
+    private final ScreenManager<?> context;
 
     /**
      * Instantiates a new Screen.
@@ -20,7 +20,7 @@ public class Screen<T> extends Pages {
      * @param content  the content
      * @param commands the commands
      */
-    public Screen(String title, Collection<T> content, Collection<Command> commands, ScreenManager context) {
+    public Screen(String title, Collection<T> content, Collection<Command> commands, ScreenManager<?> context) {
         super(content.size());
 
         this.screenContent.addAll(content);
@@ -35,8 +35,8 @@ public class Screen<T> extends Pages {
      * @param title   the title
      * @param content the options
      */
-    public Screen(String title, Collection<T> content, ScreenManager context) {
-        this(title, content, new ArrayList<Command>(), context);
+    public Screen(String title, Collection<T> content, ScreenManager<?> context) {
+        this(title, content, new ArrayList<>(), context);
     }
 
     /**
@@ -44,7 +44,7 @@ public class Screen<T> extends Pages {
      *
      * @param content the options
      */
-    public Screen(Collection<T> content, ScreenManager context) {
+    public Screen(Collection<T> content, ScreenManager<?> context) {
         this("Default Screen Title", content, context);
     }
 
@@ -108,7 +108,7 @@ public class Screen<T> extends Pages {
             .collect(Collectors.toList());
     }
 
-    public ScreenManager getContext() {
+    public ScreenManager<?> getContext() {
         return context;
     }
 
@@ -167,7 +167,7 @@ public class Screen<T> extends Pages {
             if (isOption || isComponent)
                 content.append(index).append(" : ");
 
-            content.append(screenContent.get(i).toString())
+            content.append(printableContent.get(i).toString())
                 .append("\n");
         }
 

@@ -16,7 +16,7 @@ import java.util.*;
 public class Navigation {
     private static boolean renderer = true;
     private static int maxAmountItems;
-    private final ArrayList<Command> defaultCommands = new ArrayList<>();
+    private static final ArrayList<Command> defaultCommands = new ArrayList<>();
     private ScreenManager<?> sM;
 
     /**
@@ -92,7 +92,7 @@ public class Navigation {
      *
      * @return the default commands
      */
-    public List<Command> getDefaultCommands() {
+    public static List<Command> getDefaultCommands() {
         return defaultCommands;
     }
 

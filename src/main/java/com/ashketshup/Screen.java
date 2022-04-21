@@ -100,9 +100,11 @@ public class Screen<T> extends Pages {
     }
 
     public List<Command> getNonHiddenCommands() {
-        return screenCommands
+        List<Command> res = new ArrayList<>(Navigation.getDefaultCommands());
+        res.addAll(getScreenCommands());
+        return res
             .stream()
-            .filter(Command::isCommandHidden)
+            .filter(Command::isCommandVisible)
             .collect(Collectors.toList());
     }
 
@@ -127,10 +129,10 @@ public class Screen<T> extends Pages {
         StringBuilder sB = new StringBuilder();
 
         for (Command cmd : this.getNonHiddenCommands())
-            sB.append(cmd.getCommandTrigger() + " - " + cmd.getCommandDescription());
+            sB.append(cmd + "    ");
 
         StringStyler help = new StringStyler(
-            sB.toString() + "\n",
+            sB + "\n",
             StringStyler.WHITE,
             StringStyler.DISABLED
         );
@@ -169,7 +171,7 @@ public class Screen<T> extends Pages {
                 .append("\n");
         }
 
-        return "" + help + title + pageInfo + content;
+        return help + "\n" + title + pageInfo + content;
     }
 
 }

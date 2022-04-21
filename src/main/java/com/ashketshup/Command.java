@@ -89,6 +89,10 @@ public class Command {
         return commandHidden;
     }
 
+    public boolean isCommandVisible() {
+        return !commandHidden;
+    }
+
     /**
      * Sets command trigger.
      *

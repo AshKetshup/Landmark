@@ -85,6 +85,10 @@ public class Command {
         return commandFunction;
     }
 
+    public boolean isCommandHidden() {
+        return commandHidden;
+    }
+
     /**
      * Sets command trigger.
      *

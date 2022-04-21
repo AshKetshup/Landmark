@@ -9,7 +9,6 @@ public class ScreenManager<T> {
     private final HashMap<String, Article> articleHashMap = new HashMap<>();
     private final HashMap<String, Form> formHashMap = new HashMap<>();
 
-
     // IDEA: Tornar a stack para strings e depois apenas quando fazêmos o getBindScreen ir buscar aos HashMaps
 
     public ScreenManager() {    }
@@ -70,5 +69,9 @@ public class ScreenManager<T> {
      */
     public void unbindLastScreen() {
         this.callStack.pop();
+
+        // Ends program in case of last screen
+        if (this.callStack.empty())
+            Navigation.setRenderer(false);
     }
 }

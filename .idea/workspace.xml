@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8815d279-d94d-4e9c-a88b-dff4d78527cb" name="Changes" comment="" />
+    <list default="true" id="8815d279-d94d-4e9c-a88b-dff4d78527cb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/ScreenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/ScreenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ArticleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArticleTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +125,7 @@
       <recent name="E:\OneDrive - Universidade da Beira Interior\TUI-Java-Navigation\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ScreenTest">
+  <component name="RunManager" selected="Application.ArticleTest">
     <configuration name="ArticleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArticleTest" />
       <module name="Landmark.test" />

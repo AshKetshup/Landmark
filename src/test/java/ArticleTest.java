@@ -1,29 +1,27 @@
 
-import com.ashketshup.TUI.StringStyler;
-import com.ashketshup.markdownParser.CommonStyle;
-import com.ashketshup.markdownParser.Parser;
-import com.ashketshup.markdownParser.Style;
-
-import java.util.List;
+import com.ashketshup.Article;
+import com.ashketshup.Navigation;
+import com.ashketshup.ScreenManager;
 
 public class ArticleTest {
 
     public static void main(String[] args) {
-        Style style = new Style(new CommonStyle());
-        List<StringStyler> x = Parser.getMarkdownStyled(
-            new StringBuilder("# This one is H1\n")
-                .append("### This one should be H3\n")
-                .append("*italic* **bold** ***bold & italic***\n")
-                .append("```java\n")
-                .append("Some code {\n")
-                .append("    return some Shit;\n")
-                .append("}\n")
-                .append("```\n")
-                .toString()
-        );
+        ScreenManager<?> sM = new ScreenManager<>();
+        Navigation nav = new Navigation(sM, 5);
 
-        for (StringStyler s : x){
-            System.out.println(s.toString());
-        }
+        sM.addArticle(
+            "welcome",
+            Article.genArticleFromString(
+                "Test Article Title by Ash",
+                "Hello there, this is a text\n" +
+                "And sure is an article from a string\n" +
+                "\n" +
+                "Signed by Ash\n",
+                sM
+            )
+        );
+        sM.bindScreen(sM.getArticle("welcome"));
+
+        nav.loop();
     }
 }

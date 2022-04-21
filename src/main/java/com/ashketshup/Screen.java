@@ -5,6 +5,7 @@ import com.ashketshup.TUI.StringStyler;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Screen<T> extends Pages {
     private String screenTitle = "";
@@ -98,6 +99,13 @@ public class Screen<T> extends Pages {
         return screenCommands;
     }
 
+    public List<Command> getNonHiddenCommands() {
+        return screenCommands
+            .stream()
+            .filter(Command::isCommandHidden)
+            .collect(Collectors.toList());
+    }
+
     public ScreenManager getContext() {
         return context;
     }
@@ -116,6 +124,16 @@ public class Screen<T> extends Pages {
     public String toString() {
         boolean isOption = screenContent.get(0).getClass().equals(Option.class);
         boolean isComponent = screenContent.get(0).getClass().equals(Component.class);
+        StringBuilder sB = new StringBuilder();
+
+        for (Command cmd : this.getNonHiddenCommands())
+            sB.append(cmd.getCommandTrigger() + " - " + cmd.getCommandDescription());
+
+        StringStyler help = new StringStyler(
+            sB.toString() + "\n",
+            StringStyler.WHITE,
+            StringStyler.DISABLED
+        );
 
         StringStyler title = new StringStyler(
             this.screenTitle + "\n",
@@ -151,7 +169,7 @@ public class Screen<T> extends Pages {
                 .append("\n");
         }
 
-        return "" + title + pageInfo + content;
+        return "" + help + title + pageInfo + content;
     }
 
 }

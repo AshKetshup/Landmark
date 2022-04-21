@@ -27,7 +27,8 @@ public class Navigation {
      */
     public Navigation(ScreenManager<?> sM, int maxItems) {
         Navigation.maxAmountItems = maxItems;
-        // <editor-fold desc="List of Default Commands">
+
+        // region List of Default Commands
         defaultCommands.addAll(
             Arrays.asList(
                 new Command(
@@ -72,7 +73,8 @@ public class Navigation {
                 )
             )
         );
-        //  </editor-fold>
+        //  endregion
+
         this.sM = sM;
     }
 

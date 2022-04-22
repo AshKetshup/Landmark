@@ -1,14 +1,15 @@
-package com.ashketshup;
+package com.ashketshup.UIElements;
 
+import com.ashketshup.Foo;
 import com.ashketshup.TUI.StringStyler;
 
 /**
  * The type Command.
  */
 public class Command {
-    private boolean commandHidden;
-    private String commandTrigger;
-    private String commandDescription;
+    private final boolean commandHidden;
+    private final String commandTrigger;
+    private final String commandDescription;
     private Foo commandFunction;
 
     /**
@@ -91,24 +92,6 @@ public class Command {
 
     public boolean isCommandVisible() {
         return !commandHidden;
-    }
-
-    /**
-     * Sets command trigger.
-     *
-     * @param commandTrigger the command trigger
-     */
-    public void setCommandTrigger(String commandTrigger) {
-        this.commandTrigger = commandTrigger;
-    }
-
-    /**
-     * Sets command description.
-     *
-     * @param commandDescription the command description
-     */
-    public void setCommandDescription(String commandDescription) {
-        this.commandDescription = commandDescription;
     }
 
     /**

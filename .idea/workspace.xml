@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8815d279-d94d-4e9c-a88b-dff4d78527cb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Option.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ScreenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +70,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="OCaml Module" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -116,7 +125,7 @@
       <recent name="E:\OneDrive - Universidade da Beira Interior\TUI-Java-Navigation\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ArticleTest">
+  <component name="RunManager" selected="Application.ScreenTest">
     <configuration name="ArticleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArticleTest" />
       <module name="Landmark.test" />
@@ -234,14 +243,41 @@
           <line>21</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/Pages.java</url>
-          <line>101</line>
-          <properties class="com.ashketshup.Pages" method="trimContent">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Component.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Component.java</url>
+          <line>10</line>
+          <properties field="answer" class="com.ashketshup.UIElements.Component" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

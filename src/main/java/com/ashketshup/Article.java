@@ -2,6 +2,7 @@ package com.ashketshup;
 
 import com.ashketshup.TUI.Alarms;
 import com.ashketshup.TUI.StringStyler;
+import com.ashketshup.UIElements.Command;
 
 import java.io.IOException;
 

@@ -4,6 +4,9 @@ import com.ashketshup.TUI.Alarms;
 import com.ashketshup.TUI.Input;
 import com.ashketshup.TUI.Output;
 import com.ashketshup.TUI.StringStyler;
+import com.ashketshup.UIElements.Command;
+import com.ashketshup.UIElements.Component;
+import com.ashketshup.UIElements.Option;
 
 import java.io.IOException;
 import java.util.*;

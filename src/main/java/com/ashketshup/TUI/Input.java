@@ -1,7 +1,9 @@
 package com.ashketshup.TUI;
 
+import java.io.BufferedReader;
 import java.io.Console;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +14,8 @@ public class Input {
      * @return the string
      */
     public static String asString() throws IOException{
-        return new Scanner(System.in).nextLine();
+        return new BufferedReader(new InputStreamReader(System.in)).readLine();
+        // return new Scanner(System.in).nextLine();
     }
 
     public static int asInt() throws IOException {
@@ -196,6 +199,8 @@ public class Input {
         }
 
     public static String readHidden(String prompt) {
+        return String.valueOf(System.console().readPassword());
+        /*
         EraserThread eraserThread = new EraserThread(prompt);
         Thread mask = new Thread(eraserThread);
 
@@ -204,5 +209,6 @@ public class Input {
         eraserThread.stopMasking();
 
         return password;
+        */
     }
 }

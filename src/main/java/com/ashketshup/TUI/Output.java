@@ -1,6 +1,7 @@
 package com.ashketshup.TUI;
 
 import java.io.IOException;
+import java.util.Collections;
 
 public class Output {
     /**
@@ -18,7 +19,7 @@ public class Output {
      * @param line   the line
      */
     public static String hiddenLn(String line) {
-        return "*".repeat(line.length());
+        return String.join("", Collections.nCopies(line.length(), "*"));
     }
 
     public static void write(String line) {

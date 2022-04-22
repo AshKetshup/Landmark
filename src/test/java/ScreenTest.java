@@ -1,4 +1,4 @@
-import com.ashketshup.Component;
+import com.ashketshup.UIElements.Component;
 import com.ashketshup.Form;
 import com.ashketshup.Navigation;
 import com.ashketshup.ScreenManager;
@@ -22,9 +22,10 @@ public class ScreenTest {
             new Form(
                 "Title of Form 1",
                 Arrays.asList(
-                    new Component("username", false),
-                    new Component("password", true)
+                    new Component("username", false, true),
+                    new Component("password", true, true)
                 ),
+                () -> {},
                 sM
             )
         );

@@ -1,4 +1,6 @@
-package com.ashketshup;
+package com.ashketshup.UIElements;
+
+import com.ashketshup.Foo;
 
 public class Option {
     private String optionText;

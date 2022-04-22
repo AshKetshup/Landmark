@@ -1,6 +1,9 @@
 package com.ashketshup;
 
 import com.ashketshup.TUI.StringStyler;
+import com.ashketshup.UIElements.Command;
+import com.ashketshup.UIElements.Component;
+import com.ashketshup.UIElements.Option;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -61,15 +64,15 @@ public class Screen<T> extends Pages {
     }
 
     /**
-     * Appends a new command to the screen.
+     * Appends a new command list to the screen.
      *
-     * @param trigger     the command trigger
-     * @param description the description
-     * @param function    the function
+     * @param commands     Collection of Command
      * @return the screen
      */
-    public Screen<T> appendCommand(String trigger, String description, Foo function) {
-        return this.appendCommand(new Command(trigger, description, function));
+    public Screen<T> appendCommands(Collection<Command> commands) {
+        commands.forEach(this::appendCommand);
+
+        return this;
     }
 
     /**
@@ -173,5 +176,4 @@ public class Screen<T> extends Pages {
 
         return help + "\n" + title + pageInfo + content;
     }
-
 }

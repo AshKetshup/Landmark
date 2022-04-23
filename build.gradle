@@ -6,7 +6,7 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_13
 
 group 'com.ashketshup'
-version '1.1.0'
+version '1.1.1'
 
 repositories {
     mavenCentral()
@@ -55,14 +55,13 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/AshKetshup/Landmark")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
     publications {
         gpr(MavenPublication) {
-            artifactId = "Landmark"
             from(components.java)
         }
     }

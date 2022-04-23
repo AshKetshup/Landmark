@@ -16,35 +16,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Foo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Interfaces/Foo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/FooRecieve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Interfaces/FooRecieve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/FooReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Interfaces/FooReturn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Navigation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/ScreenManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Alarms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/TUI/StringStyler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/StringStyler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/UIElements/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/UIElements/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/UIElements/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/UIElements/Option.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/markdownParser/CommonStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/markdownParser/CommonStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/markdownParser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/markdownParser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/markdownParser/Patterns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/markdownParser/Patterns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/markdownParser/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/markdownParser/Style.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/markdownParser/Theme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/markdownParser/Theme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ArticleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ArticleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ScreenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +52,12 @@
                 <item name="Landmark" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Landmark" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -139,14 +118,14 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\OneDrive - Universidade da Beira Interior\TUI-Java-Navigation\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TUI-Java-Navigation [clean]">
+  <component name="RunManager" selected="Gradle.TUI-Java-Navigation [build]">
     <configuration name="ScreenTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ScreenTest" />
       <module name="Landmark.test" />
@@ -240,10 +219,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TUI-Java-Navigation [clean]" />
-        <item itemvalue="Gradle.TUI-Java-Navigation [javadoc]" />
         <item itemvalue="Gradle.TUI-Java-Navigation [build]" />
         <item itemvalue="Gradle.TUI-Java-Navigation [jar]" />
+        <item itemvalue="Gradle.TUI-Java-Navigation [javadoc]" />
+        <item itemvalue="Gradle.TUI-Java-Navigation [clean]" />
         <item itemvalue="Application.ScreenTest" />
       </list>
     </recent_temporary>

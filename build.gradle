@@ -55,13 +55,14 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/AshKetshup/Landmark")
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
     publications {
         gpr(MavenPublication) {
+            artifactId = "Landmark"
             from(components.java)
         }
     }

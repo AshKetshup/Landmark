@@ -1,12 +1,12 @@
 
-import com.ashketshup.Article;
-import com.ashketshup.Navigation;
-import com.ashketshup.ScreenManager;
+import com.ashketshup.Landmark.Screens.Article;
+import com.ashketshup.Landmark.Navigation;
+import com.ashketshup.Landmark.ScreenManager;
 
 public class ArticleTest {
 
     public static void main(String[] args) {
-        ScreenManager<?> sM = new ScreenManager<>();
+        ScreenManager sM = new ScreenManager();
         Navigation nav = new Navigation(sM, 5);
 
         sM.addArticle(

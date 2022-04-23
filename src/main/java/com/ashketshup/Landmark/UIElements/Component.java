@@ -34,6 +34,24 @@ public class Component implements Foo {
      */
     public void setAnswer(String newAnswer) { this.answer = newAnswer; }
 
+    /**
+     * Is hidden boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isHidden() {
+        return hidden;
+    }
+
+    /**
+     * Is required boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isRequired() {
+        return required;
+    }
+
     @Override
     public void apply() {
         this.answer = hidden ? Input.readHidden(prompt) : Input.readString(prompt);

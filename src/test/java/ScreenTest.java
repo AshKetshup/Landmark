@@ -25,7 +25,7 @@ public class ScreenTest {
                     new Component("username", false, true),
                     new Component("password", true, true)
                 ),
-                () -> {},
+                x -> {},
                 sM
             )
         );

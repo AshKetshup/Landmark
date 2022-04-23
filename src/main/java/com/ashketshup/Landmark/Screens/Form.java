@@ -1,6 +1,7 @@
 package com.ashketshup.Landmark.Screens;
 
 import com.ashketshup.Landmark.Interfaces.Foo;
+import com.ashketshup.Landmark.Interfaces.FooRecieve;
 import com.ashketshup.Landmark.ScreenManager;
 import com.ashketshup.Landmark.UIElements.Command;
 import com.ashketshup.Landmark.UIElements.Component;
@@ -16,7 +17,7 @@ public class Form extends Screen<Component> {
     /**
      * The onConfirmation to implement function.
      */
-    public Foo onConfirmation;
+    public FooRecieve<Collection<Component>> onConfirmation;
     /* Default Commands */
     private final List<Command> defaultCommands;
 
@@ -29,7 +30,7 @@ public class Form extends Screen<Component> {
      * @param onConfirmation the on confirmation
      * @param context        the context
      */
-    public Form(String title, Collection<Component> content, Collection<Command> commands, Foo onConfirmation, ScreenManager context) {
+    public Form(String title, Collection<Component> content, Collection<Command> commands, FooRecieve<Collection<Component>> onConfirmation, ScreenManager context) {
         super(title, content, commands, context);
 
         this.onConfirmation = onConfirmation;
@@ -48,7 +49,7 @@ public class Form extends Screen<Component> {
      * @param onConfirmation the on confirmation
      * @param context        the context
      */
-    public Form(String title, Collection<Component> content, Foo onConfirmation, ScreenManager context) {
+    public Form(String title, Collection<Component> content, FooRecieve<Collection<Component>> onConfirmation, ScreenManager context) {
         this(title, content, new ArrayList<>(), onConfirmation, context);
     }
 
@@ -59,7 +60,7 @@ public class Form extends Screen<Component> {
      * @param onConfirmation the on confirmation
      * @param context        the context
      */
-    public Form(Collection<Component> content, Foo onConfirmation, ScreenManager context) {
+    public Form(Collection<Component> content, FooRecieve<Collection<Component>> onConfirmation, ScreenManager context) {
         this("Default Form Title", content, onConfirmation, context);
     }
 
@@ -71,7 +72,7 @@ public class Form extends Screen<Component> {
      * @param context the context
      */
     public Form(String title, Collection<Component> content, ScreenManager context) {
-        this(title, content, new ArrayList<>(), () -> {}, context);
+        this(title, content, new ArrayList<>(), x -> {}, context);
     }
 
     /**
@@ -81,7 +82,7 @@ public class Form extends Screen<Component> {
      * @param context the context
      */
     public Form(Collection<Component> content, ScreenManager context) {
-        this(content, () -> {}, context);
+        this(content, x -> {}, context);
     }
 
     /**
@@ -89,7 +90,7 @@ public class Form extends Screen<Component> {
      *
      * @param onConfirmation the on confirmation
      */
-    public void setOnConfirmation(Foo onConfirmation) {
+    public void setOnConfirmation(FooRecieve<Collection<Component>> onConfirmation) {
         this.onConfirmation = onConfirmation;
     }
 
@@ -98,7 +99,7 @@ public class Form extends Screen<Component> {
      *
      * @return the onConfirmation
      */
-    public Foo getOnConfirmation() { return onConfirmation; }
+    public FooRecieve<Collection<Component>> getOnConfirmation() { return onConfirmation; }
 
     /**
      * Gets default commands for Forms.
@@ -111,7 +112,7 @@ public class Form extends Screen<Component> {
                 false,
                 ":c",
                 "Confirm",
-                onConfirmation
+                () -> { this.onConfirmation.apply(this.getScreenContent()); }
             ),
             new Command(
                 false,

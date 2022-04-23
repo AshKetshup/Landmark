@@ -28,10 +28,10 @@
           "name": "Landmark-1.1.0.jar",
           "url": "Landmark-1.1.0.jar",
           "size": 34296,
-          "sha512": "4b1d24e2c0bf94565a10ba2ff3920a2bb24724839fbc051d42132e267fbb39f8e6fe10ce5d74b1869027d3679e67bbbdbc217f5ff7bee4e0f46ab65a2bff8425",
-          "sha256": "3b659e4c1c18b200619c56b87ba4748b5b67c909ad3ac4c152fbb37bea064c56",
-          "sha1": "70408c55a7a083ec0565590f4f538638518a73b2",
-          "md5": "6b8f939103c7bd65b6eb280c2f5e69f0"
+          "sha512": "c9bf3299f448d8bc2aa1f139cc17321af60b294c2119285cfe7f6e7e9faea7f59b54ee3e3f89623fe1215b2be8152edb1a09c0b9c57a71e109baa9bd2df8bb6e",
+          "sha256": "c5a55308d9b9c6dd159a436cd0e8d47a49987a81407f0653438a1d560bf7a858",
+          "sha1": "2a2dadf3290367c25847eb0c0efe2cd5ed1e2ad0",
+          "md5": "b36b3c2348f3ac644479444532904e8a"
         }
       ]
     },
@@ -49,10 +49,10 @@
           "name": "Landmark-1.1.0.jar",
           "url": "Landmark-1.1.0.jar",
           "size": 34296,
-          "sha512": "4b1d24e2c0bf94565a10ba2ff3920a2bb24724839fbc051d42132e267fbb39f8e6fe10ce5d74b1869027d3679e67bbbdbc217f5ff7bee4e0f46ab65a2bff8425",
-          "sha256": "3b659e4c1c18b200619c56b87ba4748b5b67c909ad3ac4c152fbb37bea064c56",
-          "sha1": "70408c55a7a083ec0565590f4f538638518a73b2",
-          "md5": "6b8f939103c7bd65b6eb280c2f5e69f0"
+          "sha512": "c9bf3299f448d8bc2aa1f139cc17321af60b294c2119285cfe7f6e7e9faea7f59b54ee3e3f89623fe1215b2be8152edb1a09c0b9c57a71e109baa9bd2df8bb6e",
+          "sha256": "c5a55308d9b9c6dd159a436cd0e8d47a49987a81407f0653438a1d560bf7a858",
+          "sha1": "2a2dadf3290367c25847eb0c0efe2cd5ed1e2ad0",
+          "md5": "b36b3c2348f3ac644479444532904e8a"
         }
       ]
     }

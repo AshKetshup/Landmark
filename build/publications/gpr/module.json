@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.ashketshup",
+    "module": "Landmark",
+    "version": "1.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 13,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "Landmark-1.1.0.jar",
+          "url": "Landmark-1.1.0.jar",
+          "size": 34296,
+          "sha512": "4b1d24e2c0bf94565a10ba2ff3920a2bb24724839fbc051d42132e267fbb39f8e6fe10ce5d74b1869027d3679e67bbbdbc217f5ff7bee4e0f46ab65a2bff8425",
+          "sha256": "3b659e4c1c18b200619c56b87ba4748b5b67c909ad3ac4c152fbb37bea064c56",
+          "sha1": "70408c55a7a083ec0565590f4f538638518a73b2",
+          "md5": "6b8f939103c7bd65b6eb280c2f5e69f0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 13,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "Landmark-1.1.0.jar",
+          "url": "Landmark-1.1.0.jar",
+          "size": 34296,
+          "sha512": "4b1d24e2c0bf94565a10ba2ff3920a2bb24724839fbc051d42132e267fbb39f8e6fe10ce5d74b1869027d3679e67bbbdbc217f5ff7bee4e0f46ab65a2bff8425",
+          "sha256": "3b659e4c1c18b200619c56b87ba4748b5b67c909ad3ac4c152fbb37bea064c56",
+          "sha1": "70408c55a7a083ec0565590f4f538638518a73b2",
+          "md5": "6b8f939103c7bd65b6eb280c2f5e69f0"
+        }
+      ]
+    }
+  ]
+}

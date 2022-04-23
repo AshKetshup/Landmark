@@ -1,12 +1,15 @@
-package com.ashketshup;
+package com.ashketshup.Landmark.UIElements;
+
+import com.ashketshup.Landmark.Interfaces.Foo;
+import com.ashketshup.Landmark.TUI.StringStyler;
 
 /**
  * The type Command.
  */
 public class Command {
-    private boolean commandHidden;
-    private String commandTrigger;
-    private String commandDescription;
+    private final boolean commandHidden;
+    private final String commandTrigger;
+    private final String commandDescription;
     private Foo commandFunction;
 
     /**
@@ -84,21 +87,21 @@ public class Command {
     }
 
     /**
-     * Sets command trigger.
+     * Is command hidden boolean.
      *
-     * @param commandTrigger the command trigger
+     * @return the boolean
      */
-    public void setCommandTrigger(String commandTrigger) {
-        this.commandTrigger = commandTrigger;
+    public boolean isCommandHidden() {
+        return commandHidden;
     }
 
     /**
-     * Sets command description.
+     * Is command visible boolean.
      *
-     * @param commandDescription the command description
+     * @return the boolean
      */
-    public void setCommandDescription(String commandDescription) {
-        this.commandDescription = commandDescription;
+    public boolean isCommandVisible() {
+        return !commandHidden;
     }
 
     /**

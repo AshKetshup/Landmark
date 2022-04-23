@@ -1,7 +1,6 @@
-package com.ashketshup;
+package com.ashketshup.Landmark;
 
 import java.util.List;
-import com.ashketshup.Navigation;
 
 /**
  * The type Pages.

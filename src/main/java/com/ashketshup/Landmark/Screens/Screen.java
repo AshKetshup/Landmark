@@ -1,9 +1,23 @@
-package com.ashketshup;
+package com.ashketshup.Landmark.Screens;
+
+import com.ashketshup.Landmark.Navigation;
+import com.ashketshup.Landmark.Pages;
+import com.ashketshup.Landmark.ScreenManager;
+import com.ashketshup.Landmark.TUI.StringStyler;
+import com.ashketshup.Landmark.UIElements.Command;
+import com.ashketshup.Landmark.UIElements.Component;
+import com.ashketshup.Landmark.UIElements.Option;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
+/**
+ * The type Screen.
+ *
+ * @param <T> the type parameter
+ */
 public class Screen<T> extends Pages {
     private String screenTitle = "";
     private final List<T> screenContent = new ArrayList<>();
@@ -14,8 +28,9 @@ public class Screen<T> extends Pages {
      * Instantiates a new Screen.
      *
      * @param title    the title
-     * @param content  the content
+     * @param content  the UI elements
      * @param commands the commands
+     * @param context  the context
      */
     public Screen(String title, Collection<T> content, Collection<Command> commands, ScreenManager context) {
         super(content.size());
@@ -30,16 +45,18 @@ public class Screen<T> extends Pages {
      * Instantiates a new Screen.
      *
      * @param title   the title
-     * @param content the options
+     * @param content the UI elements
+     * @param context the context
      */
     public Screen(String title, Collection<T> content, ScreenManager context) {
-        this(title, content, new ArrayList<Command>(), context);
+        this(title, content, new ArrayList<>(), context);
     }
 
     /**
      * Instantiates a new Screen.
      *
-     * @param content the options
+     * @param content the UI elements
+     * @param context the context
      */
     public Screen(Collection<T> content, ScreenManager context) {
         this("Default Screen Title", content, context);
@@ -48,7 +65,7 @@ public class Screen<T> extends Pages {
     /**
      * Appends a new command to the screen.
      *
-     * @param command     the command
+     * @param command the command
      * @return the screen
      */
     public Screen<T> appendCommand(Command command) {
@@ -58,15 +75,15 @@ public class Screen<T> extends Pages {
     }
 
     /**
-     * Appends a new command to the screen.
+     * Appends a new command list to the screen.
      *
-     * @param trigger     the command trigger
-     * @param description the description
-     * @param function    the function
+     * @param commands Collection of Command
      * @return the screen
      */
-    public Screen<T> appendCommand(String trigger, String description, Foo function) {
-        return this.appendCommand(new Command(trigger, description, function));
+    public Screen<T> appendCommands(Collection<Command> commands) {
+        commands.forEach(this::appendCommand);
+
+        return this;
     }
 
     /**
@@ -96,6 +113,26 @@ public class Screen<T> extends Pages {
         return screenCommands;
     }
 
+    /**
+     * Gets non hidden commands.
+     *
+     * @return the non hidden commands
+     */
+    public List<Command> getNonHiddenCommands() {
+        List<Command> res = new ArrayList<>(Navigation.getDefaultCommands());
+        res.addAll(getScreenCommands());
+
+        return res
+            .stream()
+            .filter(Command::isCommandVisible)
+            .collect(Collectors.toList());
+    }
+
+    /**
+     * Gets context.
+     *
+     * @return the context
+     */
     public ScreenManager getContext() {
         return context;
     }
@@ -113,6 +150,17 @@ public class Screen<T> extends Pages {
     @Override
     public String toString() {
         boolean isOption = screenContent.get(0).getClass().equals(Option.class);
+        boolean isComponent = screenContent.get(0).getClass().equals(Component.class);
+        StringBuilder sB = new StringBuilder();
+
+        for (Command cmd : this.getNonHiddenCommands())
+            sB.append(cmd + "    ");
+
+        StringStyler help = new StringStyler(
+            sB + "\n",
+            StringStyler.WHITE,
+            StringStyler.DISABLED
+        );
 
         StringStyler title = new StringStyler(
             this.screenTitle + "\n",
@@ -133,7 +181,7 @@ public class Screen<T> extends Pages {
         for (int i = 0; i < printableContent.size(); i++) {
             String index = new StringStyler(
                 String.valueOf(
-                    isOption ? i : "" +
+                    isOption || isComponent ? i : "" +
                     getCurrentPage() * Navigation.getMaxAmountItems()
                 ),
                 StringStyler.WHITE,
@@ -141,14 +189,13 @@ public class Screen<T> extends Pages {
                 false
             ).toString();
 
-            if (isOption)
+            if (isOption || isComponent)
                 content.append(index).append(" : ");
 
-            content.append(screenContent.get(i).toString())
+            content.append(printableContent.get(i).toString())
                 .append("\n");
         }
 
-        return "" + title + pageInfo + content;
+        return help + "\n" + title + pageInfo + content;
     }
-
 }

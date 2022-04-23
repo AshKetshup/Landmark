@@ -1,4 +1,11 @@
-package com.ashketshup;
+package com.ashketshup.Landmark.Screens;
+
+import com.ashketshup.Landmark.Interfaces.Foo;
+import com.ashketshup.Landmark.Navigation;
+import com.ashketshup.Landmark.ScreenManager;
+import com.ashketshup.Landmark.TUI.StringStyler;
+import com.ashketshup.Landmark.UIElements.Command;
+import com.ashketshup.Landmark.UIElements.Option;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,6 +22,7 @@ public class Menu extends Screen<Option> {
      * @param title    the title
      * @param options  the options
      * @param commands the commands
+     * @param context  the context
      */
     public Menu(String title, Collection<Option> options, Collection<Command> commands, ScreenManager context) {
         super(title, options, commands, context);
@@ -25,7 +33,8 @@ public class Menu extends Screen<Option> {
      *
      * @param title   the title
      * @param options the options
-     */
+    * @param context  the context
+    */
     public Menu(String title, Collection<Option> options, ScreenManager context) {
         this(title, options, new ArrayList<>(), context);
     }
@@ -33,7 +42,8 @@ public class Menu extends Screen<Option> {
     /**
      * Instantiates a new Menu.
      *
-     * @param options the options
+     * @param options  the options
+     * @param context  the context
      */
     public Menu(Collection<Option> options, ScreenManager context) {
         this("Default Menu Title", options, context);
@@ -90,6 +100,31 @@ public class Menu extends Screen<Option> {
         return super.getScreenCommands();
     }
 
+    /**
+     * Checks if given index is available.
+     *
+     * @param i the given index
+     * @return the boolean
+     */
+    private boolean isIndexAvailable(int i) {
+        return (i >= 0 && i < getMenuOptions().size());
+    }
+
+    /**
+     * Returns to last menu.
+     */
+    public void backMenuFunction() {
+        super.getContext().unbindLastScreen();
+    }
+
+    /**
+     * Exit menu function.
+     * Exits the Navigation Loop.
+     */
+    public static void exitMenuFunction() {
+        Navigation.setRenderer(false);
+    }
+
     @Override
     public String toString() {
         StringStyler title = new StringStyler(
@@ -123,30 +158,5 @@ public class Menu extends Screen<Option> {
         }
 
         return "" + title + pageInfo + options;
-    }
-
-    /**
-     * Checks if given index is available.
-     *
-     * @param i the given index
-     * @return the boolean
-     */
-    private boolean isIndexAvailable(int i) {
-        return (i >= 0 && i < getMenuOptions().size());
-    }
-
-    /**
-     * Returns to last menu.
-     */
-    public void backMenuFunction() {
-        super.getContext().unbindLastScreen();
-    }
-
-    /**
-     * Exit menu function.
-     * Exits the program.
-     */
-    public static void exitMenuFunction() {
-        Navigation.setRenderer(false);
     }
 }

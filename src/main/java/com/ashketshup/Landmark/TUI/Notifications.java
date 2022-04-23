@@ -1,13 +1,11 @@
-package com.ashketshup;
+package com.ashketshup.Landmark.TUI;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
- * The type Tui.
+ * The type Notifications.
  */
-public class TUI {
+public class Notifications {
     private static final String CRITICAL_PREFIX = " ! ";
     private static final String VALID_PREFIX    = " ✓ ";
     private static final String WARNING_PREFIX  = " - ";
@@ -19,34 +17,6 @@ public class TUI {
     private static final ArrayList<String> tips      = new ArrayList<>();
 
     /**
-     * Writeln.
-     *
-     * @param line the line
-     */
-    public static void writeln(String line) {
-        System.out.println(line);
-    }
-
-    /**
-     * Writeln.
-     *
-     * @param line   the line
-     * @param hidden the hidden
-     */
-    public static void writeln(String line, boolean hidden) {
-        writeln("*".repeat(line.length()));
-    }
-
-    /**
-     * Request input string.
-     *
-     * @return the string
-     */
-    public static String requestInput() {
-        return new Scanner(System.in).nextLine();
-    }
-
-    /**
      * Gets all criticals.
      *
      * @return the all criticals
@@ -54,9 +24,9 @@ public class TUI {
     public static String getAllCriticals() {
         StringBuilder sumCriticals = new StringBuilder();
 
-        for (String critical : TUI.criticals) {
+        for (String critical : Notifications.criticals) {
             StringStyler x = new StringStyler(
-                TUI.CRITICAL_PREFIX + critical,
+                Notifications.CRITICAL_PREFIX + critical,
                 StringStyler.RED,
                 StringStyler.BLINK,
                 true
@@ -77,9 +47,9 @@ public class TUI {
     public static String getAllValids() {
         StringBuilder sumValids = new StringBuilder();
 
-        for (String valid : TUI.valids) {
+        for (String valid : Notifications.valids) {
             StringStyler x = new StringStyler(
-                TUI.VALID_PREFIX + valid,
+                Notifications.VALID_PREFIX + valid,
                 StringStyler.GREEN,
                 StringStyler.NORMAL,
                 true
@@ -99,9 +69,9 @@ public class TUI {
     public static String getAllWarnings() {
         StringBuilder sumWarnings = new StringBuilder();
 
-        for (String warning : TUI.warnings) {
+        for (String warning : Notifications.warnings) {
             StringStyler x = new StringStyler(
-                TUI.WARNING_PREFIX + warning,
+                Notifications.WARNING_PREFIX + warning,
                 StringStyler.YELLOW,
                 StringStyler.UNDERLINE,
                 false
@@ -121,9 +91,9 @@ public class TUI {
     public static String getAllTips() {
         StringBuilder sumTips = new StringBuilder();
 
-        for (String tip : TUI.tips) {
+        for (String tip : Notifications.tips) {
             StringStyler x = new StringStyler(
-                TUI.TIP_PREFIX + tip,
+                Notifications.TIP_PREFIX + tip,
                 StringStyler.YELLOW,
                 StringStyler.UNDERLINE,
                 false
@@ -136,11 +106,11 @@ public class TUI {
     }
 
     /**
-     * Gets all alarms.
+     * Gets all notifications.
      *
-     * @return the all alarms
+     * @return the all notifications
      */
-    public static String getAllAlarms() {
+    public static String getAllNotifications() {
         StringBuilder sumAlarms;
         sumAlarms = new StringBuilder("\n");
 
@@ -167,20 +137,32 @@ public class TUI {
         return sumAlarms.toString();
     }
 
-    private static void removeAllCriticals() {
-        TUI.criticals.clear();
+    /**
+     * Remove all criticals.
+     */
+    public static void removeAllCriticals() {
+        Notifications.criticals.clear();
     }
 
-    private static void removeAllValids() {
-        TUI.valids.clear();
+    /**
+     * Remove all valids.
+     */
+    public static void removeAllValids() {
+        Notifications.valids.clear();
     }
 
-    private static void removeAllWarnings() {
-        TUI.warnings.clear();
+    /**
+     * Remove all warnings.
+     */
+    public static void removeAllWarnings() {
+        Notifications.warnings.clear();
     }
 
-    private static void removeAllTips() {
-        TUI.tips.clear();
+    /**
+     * Remove all tips.
+     */
+    public static void removeAllTips() {
+        Notifications.tips.clear();
     }
 
     /**
@@ -189,7 +171,7 @@ public class TUI {
      * @param s the s
      */
     public static void createCritical(String s) {
-        TUI.criticals.add(s);
+        Notifications.criticals.add(s);
     }
 
     /**
@@ -198,7 +180,7 @@ public class TUI {
      * @param s the s
      */
     public static void createValid(String s) {
-        TUI.valids.add(s);
+        Notifications.valids.add(s);
     }
 
     /**
@@ -207,7 +189,7 @@ public class TUI {
      * @param s the s
      */
     public static void createWarning(String s) {
-        TUI.warnings.add(s);
+        Notifications.warnings.add(s);
     }
 
     /**
@@ -216,40 +198,16 @@ public class TUI {
      * @param s the s
      */
     public static void createTip(String s) {
-        TUI.tips.add(s);
+        Notifications.tips.add(s);
     }
 
     /**
-     * Remove all alarms.
+     * Remove all notifications.
      */
-    public static void removeAllAlarms() {
+    public static void removeAllNotifications() {
         removeAllCriticals();
         removeAllValids();
         removeAllWarnings();
         removeAllTips();
-    }
-
-    /**
-     * Clear console.
-     *
-     * @throws IOException          the io exception
-     * @throws InterruptedException the interrupted exception
-     */
-    public static void clearConsole() throws IOException, InterruptedException {
-
-        String os = System.getProperty("os.name");
-        ProcessBuilder pb;
-
-        if (os.toLowerCase().contains("windows"))
-            pb = new ProcessBuilder("cmd", "/c", "cls");
-        else
-            pb = new ProcessBuilder("clear");
-
-        Process startProcess = pb.inheritIO().start();
-
-        startProcess.waitFor();
-
-
-        System.out.println("\033[H\033[2J");
     }
 }

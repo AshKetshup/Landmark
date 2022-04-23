@@ -35,6 +35,31 @@ public class Component implements Foo {
     public void setAnswer(String newAnswer) { this.answer = newAnswer; }
 
     /**
+     * Gets answer.
+     *
+     * @return the answer
+     */
+    public String getAnswer() {
+        return answer;
+    }
+
+    /**
+     * Is answer empty boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isAnswerEmpty() { return answer.equals(""); }
+
+    /**
+     * Gets prompt.
+     *
+     * @return the prompt
+     */
+    public String getPrompt() {
+        return prompt;
+    }
+
+    /**
      * Is hidden boolean.
      *
      * @return the boolean

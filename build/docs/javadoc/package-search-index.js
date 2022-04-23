@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.ashketshup.Landmark"},{"l":"com.ashketshup.Landmark.Interfaces"},{"l":"com.ashketshup.Landmark.markdownParser"},{"l":"com.ashketshup.Landmark.Screens"},{"l":"com.ashketshup.Landmark.TUI"},{"l":"com.ashketshup.Landmark.UIElements"}]

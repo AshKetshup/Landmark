@@ -1,9 +1,9 @@
 -classpath 'E:\\OneDrive - Universidade da Beira Interior\\TUI-Java-Navigation\\build\\classes\\java\\main;E:\\OneDrive - Universidade da Beira Interior\\TUI-Java-Navigation\\build\\resources\\main'
 -d 'E:\\OneDrive - Universidade da Beira Interior\\TUI-Java-Navigation\\build\\docs\\javadoc'
--doctitle 'Landmark 1.1.3 API'
+-doctitle 'Landmark 1.1.4 API'
 -notimestamp 
 -quiet 
--windowtitle 'Landmark 1.1.3 API'
+-windowtitle 'Landmark 1.1.4 API'
 'E:\\OneDrive - Universidade da Beira Interior\\TUI-Java-Navigation\\src\\main\\java\\com\\ashketshup\\Landmark\\Interfaces\\Foo.java'
 'E:\\OneDrive - Universidade da Beira Interior\\TUI-Java-Navigation\\src\\main\\java\\com\\ashketshup\\Landmark\\Interfaces\\FooRecieve.java'
 'E:\\OneDrive - Universidade da Beira Interior\\TUI-Java-Navigation\\src\\main\\java\\com\\ashketshup\\Landmark\\Interfaces\\FooReturn.java'

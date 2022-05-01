@@ -17,12 +17,62 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/Foo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/Foo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/FooRecieve.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/FooRecieve.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/FooReturn.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/FooReturn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Interfaces/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Pages.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Pages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/ScreenManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/ScreenManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Article.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Form.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/Screen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/Screens/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/Input.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/Input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/Notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/Notifications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/Output.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/Output.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/StringStyler.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/StringStyler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/TUI/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/Command.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/Command.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/Component.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/Component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/Option.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/Option.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/UIElements/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/CommonStyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/CommonStyle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Parser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Patterns.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Patterns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Style.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Style.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Theme.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/Theme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/markdownParser/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com/ashketshup/Landmark/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/UIElements/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/UIElements/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ScreenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,18 +114,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="documentation" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Landmark" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Landmark" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="publishing" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -86,9 +124,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="OCaml Module" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -102,6 +140,12 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/Screens/Form.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/TUI/Input.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ashketshup/Landmark/UIElements/Component.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -132,6 +176,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.TUI-Java-Navigation [build]">
+    <configuration name="ScreenTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScreenTest" />
+      <module name="Landmark.test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TUI-Java-Navigation [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -165,27 +216,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TUI-Java-Navigation [generatePomFileForGprPublication]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="generatePomFileForGprPublication" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -240,10 +270,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.TUI-Java-Navigation [build]" />
+        <item itemvalue="Application.ScreenTest" />
         <item itemvalue="Gradle.TUI-Java-Navigation [javadoc]" />
         <item itemvalue="Gradle.TUI-Java-Navigation [clean]" />
         <item itemvalue="Gradle.TUI-Java-Navigation [publishGprPublicationToGitHubPackagesRepository]" />
-        <item itemvalue="Gradle.TUI-Java-Navigation [generatePomFileForGprPublication]" />
       </list>
     </recent_temporary>
   </component>

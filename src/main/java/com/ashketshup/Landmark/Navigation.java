@@ -1,6 +1,8 @@
 package com.ashketshup.Landmark;
 
 import com.ashketshup.Landmark.Screens.Article;
+import com.ashketshup.Landmark.Screens.Form;
+import com.ashketshup.Landmark.Screens.Menu;
 import com.ashketshup.Landmark.TUI.Notifications;
 import com.ashketshup.Landmark.TUI.Input;
 import com.ashketshup.Landmark.TUI.Output;
@@ -66,6 +68,12 @@ public class Navigation {
                     ":r",
                     "Refresh Screen",
                     () -> { }
+                ),
+                new Command(
+                    true,
+                    ":f",
+                    "Filter Options",
+                    () -> { sM.getBindedScreen().setFilter(Input.readString("Find: ")); }
                 ),
                 new Command(
                     false,
@@ -157,8 +165,8 @@ public class Navigation {
     public boolean inputListener(String s) {
         boolean toWarn = true;
 
-        boolean isMenu = sM.getBindedScreen().getScreenContent().get(0).getClass().equals(Option.class);
-        boolean isForm = sM.getBindedScreen().getScreenContent().get(0).getClass().equals(Component.class);
+        boolean isMenu = sM.getBindedScreen() instanceof Menu;
+        boolean isForm = sM.getBindedScreen() instanceof Form;
 
         if (s.isEmpty())
             return renderer;
@@ -201,7 +209,6 @@ public class Navigation {
 
         return renderer;
     }
-
 
     /**
      * Generates an help article, containing all commands available in the current screen.

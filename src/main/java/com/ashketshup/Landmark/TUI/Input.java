@@ -301,6 +301,8 @@ public class Input {
      * @return the string
      */
     public static String readHidden(String prompt) {
+        Output.write(prompt + "  ");
         return String.valueOf(System.console().readPassword());
+//        return readString(prompt);
     }
 }

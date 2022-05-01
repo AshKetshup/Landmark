@@ -23,6 +23,7 @@ public class Screen<T> extends Pages {
     private final List<T> screenContent = new ArrayList<>();
     private final List<Command> screenCommands = new ArrayList<>();
     private final ScreenManager context;
+    private String filter;
 
     /**
      * Instantiates a new Screen.
@@ -39,6 +40,7 @@ public class Screen<T> extends Pages {
         this.screenCommands.addAll(commands);
         this.screenTitle = title;
         this.context = context;
+        this.filter = "";
     }
 
     /**
@@ -138,6 +140,36 @@ public class Screen<T> extends Pages {
     }
 
     /**
+     * Sets filter.
+     *
+     * @param filter the filter
+     */
+    public void setFilter(String filter) {
+        this.filter = filter;
+    }
+
+    /**
+     * Gets filter.
+     *
+     * @return the filter
+     */
+    public String getFilter() {
+        return filter;
+    }
+
+    /**
+     * Filters a List by its setted filter
+     * @param content Content of given screen
+     * @return List of T
+     */
+    private List<T> filter(List<T> content) {
+        return content
+            .stream()
+            .filter(x -> { return x.toString().contains(filter); })
+            .collect(Collectors.toList());
+    }
+
+    /**
      * Checks if given index is available.
      *
      * @param i the given index
@@ -149,12 +181,13 @@ public class Screen<T> extends Pages {
 
     @Override
     public String toString() {
-        boolean isOption = screenContent.get(0).getClass().equals(Option.class);
-        boolean isComponent = screenContent.get(0).getClass().equals(Component.class);
+        boolean isOption = this instanceof Menu;
+        boolean isComponent = this instanceof Form;
+        boolean isStringStyler = this instanceof Article;
         StringBuilder sB = new StringBuilder();
 
         for (Command cmd : this.getNonHiddenCommands())
-            sB.append(cmd + "    ");
+            sB.append(cmd).append("    ");
 
         StringStyler help = new StringStyler(
             sB + "\n",
@@ -176,7 +209,7 @@ public class Screen<T> extends Pages {
         );
 
         StringBuilder content = new StringBuilder();
-        List<T> printableContent = trimContent(screenContent);
+        List<T> printableContent= trimContent(filter.isEmpty() ? screenContent : filter(screenContent));
 
         for (int i = 0; i < printableContent.size(); i++) {
             String index = new StringStyler(

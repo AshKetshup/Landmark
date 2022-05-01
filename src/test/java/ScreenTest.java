@@ -23,7 +23,7 @@ public class ScreenTest {
                 "Title of Form 1",
                 Arrays.asList(
                     new Component("username", false, true),
-                    new Component("password", true, true)
+                    new Component("password", false, true)
                 ),
                 x -> {},
                 sM

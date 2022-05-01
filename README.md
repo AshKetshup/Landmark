@@ -187,10 +187,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [X] Commands
     - [X] Default Commands
     - [X] Screen Commands
-- [ ] Forms
+- [X] Forms
     - [ ] Login 
     - [ ] Register 
-    - [ ] Custom 
+    - [X] Custom 
 - [ ] File Reader
     - [ ] Markdown Parser
     - [ ] Markdown Highlighter
